@@ -1,9 +1,7 @@
-var setSomePropertiesOn = (x, y, onePlus) {
-	x: 7;
-	y: 8;
-	onePlus: function(onePlus) {
-		onePlus ++;
+function setSomePropertiesOn(object) {
+	object.x = 7;
+	object.y = 8;
+	object.onePlus = function(number) {
+		return (number + 1);
 	};
-},
-
-var object.setSomePropertiesOn;
+};
