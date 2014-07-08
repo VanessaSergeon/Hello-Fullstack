@@ -1,7 +1,7 @@
 function repeat(word, number) {
 	var repeated = "";
 		for (var i = 0; i <= number; i++) {
-			repeated += word;
+			repeated += "word";
 		} // end for loop
 	return repeated;
 } // end repeat function
@@ -33,7 +33,7 @@ function sum(array) {
 }; // end function sum
 
 function paramify(hash) {
-
+	// Use for in loop
 }; // end paramify functiion
 
 function factorial(number) {
