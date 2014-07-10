@@ -7,17 +7,20 @@ function repeat(word, number) {
 	return repeated;
 } // end repeat function.
 
+// passes test
+function factorial(number) {
+    if (number === 0 || number == 1) {
+        return 1;
+    } else {
+    var fact = 1;
+	for (var i = number; i >= 1; i --) {
+		fact = fact * i;
+	} // end for loop
+	return fact;
+    } // end if else statement
+} // end factorial function
 
 /*
-
-// repeat works but will not pass test. why?
-function repeat(word, number) {
-	var repeated = "";
-		for (var i = 0; i <= number -1; i++) {
-			repeated += word;
-		} // end for loop
-	return repeated;
-} // end repeat function.
 
 function join(object, delimiter) {
 	var joint = "";
@@ -48,19 +51,6 @@ function sum(object) {
 function paramify(hash) {
 	// Use for in loop
 }; // end paramify functiion
-
-// factorial works.
-function factorial(number) {
-    if (number === 0 || number == 1) {
-        return 1;
-    } else {
-    var fact = 1;
-	for (var i = number; i >= 1; i --) {
-		fact = fact * i;
-	} // end for loop
-	return fact;
-    } // end if else statement
-} // end factorial function
 
 function concat_string() {
 	var result = concat_string.join('');
