@@ -1,0 +1,47 @@
+body {
+	background-color: grey;
+}
+
+header {
+	background-color: darkblue;
+	color: white;
+	text-align: center;
+	padding: 5px 0 5px;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 1.1em;
+	margin: -20px 0 15px;
+}
+
+section {
+	text-align: center;
+}
+
+h3 {
+	font-size: 2.25em;
+}
+
+#game {
+	border: 2px solid;
+	margin: 25px;
+	padding: 25px;
+}
+
+#guess {
+	height: 30px;
+	width: 85px;
+	border-radius: 10px 0 10px 0;
+	margin: 0 5px;
+}
+
+#submit, .button {
+	padding: 10px;
+	background-color: darkblue;
+	color: white;
+	border-radius: 10px 0 10px 0;
+}

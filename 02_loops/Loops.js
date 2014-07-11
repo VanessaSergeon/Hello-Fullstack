@@ -20,8 +20,30 @@ function factorial(number) {
     } // end if else statement
 } // end factorial function
 
+function paramify(hash) {
+    var array = [];
+    var propArray = Object.keys(hash); // array of properties
+    for(p in hash) {
+        var plus = propArray[p] + '=' + hash[propArray[p]];
+        array.push(plus);
+    } // end for in loop
+    var sort = array.sort();
+    var add = array.join('&');
+    return add;
+} // end paramify
+
+
+function sum(object) {
+    var add = 0;
+	for (var i = 0; i < object.length; i++) {
+		add += object[i];
+	}
+	return add;
+} // end function sum
+
 /*
 
+// causes all code to fail test when un-commented.
 function join(object, delimiter) {
 	var joint = "";
 	if (delimiter) {
@@ -40,20 +62,23 @@ function join(object, delimiter) {
 	return joint;
 }; // end join function
 
-function sum(object) {
-	var add = 0;
-	for (var i = 0; i <= object.legnth; i++) {
-		add = add + object[i];
-	};
-	return add;
-}; // end function sum
 
 function paramify(hash) {
-	// Use for in loop
-}; // end paramify functiion
+    var array = [];
+    var propArray = Object.keys(hash); // array of properties
+    for(p in hash) {
+        var plus = propArray[p] + '=' + hash[propArray[p]];
+        array.push(plus);
+    } // end for in loop
+    var sort = array.sort();
+    var sum = array.join('&');
+    return sum;
+} // end paramify
 
-function concat_string() {
-	var result = concat_string.join('');
+
+
+function concat_string(argument) {
+	var result = argument.join('');
 	return result;
 }; // end result function
 
