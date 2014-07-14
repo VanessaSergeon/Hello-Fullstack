@@ -26,7 +26,9 @@ function Calculator() {
 		if(stack.length < 2) {
 			return error;
 		} else {
-			total = stack.pop() / stack.pop();
+            var denominator = stack.pop();
+            var numerator = stack.pop();
+			total = numerator / denominator;
 			stack.push(total);
 		};
 	} // end divide
