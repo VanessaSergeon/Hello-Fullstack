@@ -21,17 +21,17 @@ function factorial(number) {
 } // end factorial function
 
 function paramify(hash) {
-    var array = [];
+    var arr = [];
+    var add = "";
     var propArray = Object.keys(hash); // array of properties
-    for(p in hash) {
-        var plus = propArray[p] + '=' + hash[propArray[p]];
-        array.push(plus);
+    for(var i in propArray) {
+        var plus = propArray[i] + "=" + hash[propArray[i]];
+        arr.push(plus);
     } // end for in loop
-    var sort = array.sort();
-    var add = array.join('&');
+    arr = arr.sort();
+    add = arr.join('&');
     return add;
 } // end paramify
-
 
 function sum(object) {
     var add = 0;
@@ -40,6 +40,19 @@ function sum(object) {
 	}
 	return add;
 } // end function sum
+
+function concat_string(args) {
+    var arr = Array.prototype.slice.call(arguments);
+    var arr1 = [];
+        for(i=0; i<=arr.length; i++) {
+        if(arr[i] !== " ") {
+    	    arr1.push(arr[i]);
+    	}
+    }
+    var str = arr1.join(' ');
+	return str;
+} // end concat_string
+
 
 /*
 
