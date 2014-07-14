@@ -1,4 +1,3 @@
-// passes test
 function repeat(word, number) {
 	var repeated = "";
 		for (var i = 0; i <= number -1; i++) {
@@ -7,7 +6,14 @@ function repeat(word, number) {
 	return repeated;
 } // end repeat function.
 
-// passes test
+function join(array, delimiter) {
+    var str = "";
+    for(i=0; i <= array.length - 1; i++){
+        str += array[i];
+    }
+    return str;
+    } // end join
+
 function factorial(number) {
     if (number === 0 || number == 1) {
         return 1;
