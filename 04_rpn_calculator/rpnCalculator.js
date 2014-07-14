@@ -7,7 +7,7 @@ function Calculator() {
 	}; // end push
 	this.plus = function() {
 		if(stack.length < 2) {
-			return error;
+			throw error;
 		} else {
 			total = stack.pop() + stack.pop();
 			stack.push(total);
@@ -15,7 +15,7 @@ function Calculator() {
 	} // end plus
 	this.minus = function() {
 		if(stack.length < 2) {
-			return error;
+			throw error;
 		} else {
 			total -= stack.pop();
 			total += stack.pop();
@@ -24,7 +24,7 @@ function Calculator() {
 	} // end minus
 	this.divide = function() {
 		if(stack.length < 2) {
-			return error;
+			throw error;
 		} else {
             var denominator = stack.pop();
             var numerator = stack.pop();
@@ -34,7 +34,7 @@ function Calculator() {
 	} // end divide
 	this.times = function() {
 		if(stack.length < 2) {
-			return error;
+			throw error;
 		} else {
 			total = stack.pop() * stack.pop();
 			stack.push(total);
