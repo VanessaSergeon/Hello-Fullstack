@@ -7,32 +7,32 @@ function repeat(word, number) {
 } // end repeat function.
 
 // This version of join returns undefined when array is empty.
-function join(array, delimiter) {
-    var str = "";
-    for(i=0; i <= array.length - 2; i++){
-        str += array[i] + (delimiter || "");
-    }
-    str += array[array.length - 1];
-    return str;
-    } // end join
-
-
 // function join(array, delimiter) {
 //     var str = "";
-//     debugger;
-
-//     if(typeof delimiter === 'undefined'){
-//         delimiter = "";
+//     for(i=0; i <= array.length - 2; i++){
+//         str += array[i] + (delimiter || "");
 //     }
-
-
-//     for(var i=0; i <= array.length; i++){
-//         str += array[i];
-//         if( i !== array.length - 1)
-//             str+=delimiter;   
-//     }
+//     str += array[array.length - 1];
 //     return str;
 //     } // end join
+
+
+function join(array, delimiter) {
+    var str = "";
+
+    if(typeof delimiter === 'undefined'){
+        delimiter = "";
+    }
+
+
+    for(var i=0; i < array.length; i++){
+        str += array[i];
+        if( i !== array.length - 1){
+            str += delimiter;
+    }
+  }
+   return str;
+}
 
 function factorial(number) {
     if (number === 0 || number == 1) {
@@ -70,12 +70,4 @@ function sum(object) {
 // concat_string works on repl_it. do not know why specs dont pass.
 function concat_string() {
     return Array.prototype.slice.call(arguments).join('');
- //    var arr1 = [];
- //        for(i=0; i<=arr.length; i++) {
- //        if(arr[i] !== " ") {
- //    	    arr1.push(arr[i]);
- //    	}
- //    }
- //    var str = arr1.join(' ');
-	// return str;
 } // end concat_string
