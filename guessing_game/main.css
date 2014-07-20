@@ -45,3 +45,11 @@ h3 {
 	color: white;
 	border-radius: 10px 0 10px 0;
 }
+
+#status {
+	font-size: 2em;
+}
+
+#turns {
+	font-size: 2em;
+}
