@@ -5,8 +5,15 @@ function game() {
 	var correct = false;
 	while((turns > 0) && (correct == false)) {
 		var guess = prompt("Enter a guess, 1-100", "");
-		if(guess > ans) {alert("Guess Lower!");}
-		if(guess < ans) {alert("Guess Higher!");}
+		var diff = Math.abs(guess - ans);
+		var hotCold;
+		if(diff < 70) {hotCold = 'You are ice cold!';}
+		if(diff < 50) {hotCold = 'You are cold!';}
+		if(diff < 30) {hotCold = 'You are warm!';}
+		if(diff < 10) {hotCold = 'You are hot!';}
+
+		if(guess > ans) {alert("Guess Lower! " + hotCold);}
+		if(guess < ans) {alert("Guess Higher! " + hotCold);}
 		if(guess == ans) {
 			alert("Correct, You Win!!");
 			correct = true;
