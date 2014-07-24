@@ -15,13 +15,14 @@ function translate(word) {
 		}
 		//first letter consonant changes end to 'first letter + ay'
 		//first three letters consonants changes end to 'first 3 letters + ay'
-		if(toFirstLetter != vowels[i]) {
+		if((toFirstLetter != vowels[i]) && (secondLetter == vowels[i])) {
 			s = word.slice(1, word.length) + toFirstLetter + pigEnding;
 			return s;
 		}
 		//first two letters consonants changes end to 'first 2 letters + ay'
-		if(toFirstLetter && secondLetter != vowels[i]) {
+		if((toFirstLetter != vowels[i]) && (secondLetter != vowels[i])) {
 			s = word.slice(2, word.length) + toSecondLetter + pigEnding;
+			return s;
 		}
 	}
 	
