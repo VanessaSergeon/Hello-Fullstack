@@ -60,7 +60,7 @@ function sum(arr) {
 function every(array, test) {
 	var pass = true;
 	for(i = 0; i < array.length; i++) {
-		if(array[i] == false) {
+		if((array[i] === false) || (test(array[i]) === false)) {
 			pass = false;
 		}
 	}
