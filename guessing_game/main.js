@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
 function playGame() {
 	var turns = 5;
 	var guess = $('#guess').val();
@@ -24,6 +22,9 @@ function genRandNum() {
 
 window.onload = function() { genRandNum(); }
 
-// $('#submit').click('playGame()');
+$('#submit').click(function() {
+	'playGame()'
+});
 
-}); // end ready
+$('#newGame').click(function() {
+	'playGame()'
