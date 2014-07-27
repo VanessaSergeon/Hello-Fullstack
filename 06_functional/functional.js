@@ -51,3 +51,18 @@ function reduce(array, start, action) {
 	}
 	return result;
 }
+
+// not passing
+function sum(arr) {
+	arr.reduce(function(a, b) {return a + b;}, 0);
+}
+
+function every(array, test) {
+	var pass = true;
+	for(i = 0; i < array.length; i++) {
+		if(array[i] == false) {
+			pass = false;
+		}
+	}
+	return pass;
+}
