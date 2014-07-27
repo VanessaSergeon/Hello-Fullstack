@@ -14,7 +14,6 @@ function forEach(array, action) {
     action(array[i]);
 }
 
-// not passing
 function map(arr, multiple) {
 	var timesArr = [];
 	for(i = 0; i < arr.length; i++) {
@@ -30,4 +29,25 @@ function filter(array, test) {
 		passTest.push(array[i]);
 	}
 	return passTest;
+}
+
+// passing 1/2
+function contains(arr, value) {
+	var propArr = Object.keys(arr);
+	var found = false;
+	for(i = 0; i < arr.length; i++) {
+		if((arr[i] === value) || (propArr[i] === value)) {
+			found = true;
+		}
+	}
+	return found;
+}
+
+// passing 1/2
+function reduce(array, start, action) {
+	var result = start;
+	for(i = 0; i < array.length; i++) {
+		result = action(result, array[i]);
+	}
+	return result;
 }
