@@ -66,3 +66,13 @@ function every(array, test) {
 	}
 	return pass;
 }
+
+function any(array, test) {
+	var passing = false;
+	for(i = 0; i < array.length; i++) {
+		if((array[i] === true) || (test(array[i]) === true)) {
+			passing = true;
+		}
+	}
+	return passing;
+}
