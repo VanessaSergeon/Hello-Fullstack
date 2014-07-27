@@ -9,15 +9,18 @@ function makeAdder(A) {
 	}
 }
 
-// works in repl.it but not passing spec
 function forEach(array, action) {
   for (var i = 0; i < array.length; i++)
     action(array[i]);
 }
 
+// not passing
 function map(arr, multiple) {
-	arr.forEach(multiple);
-	return arr;
+	var timesArr = [];
+	for(i = 0; i < arr.length; i++) {
+		timesArr.push(multiple(arr[i]));
+	}
+	return timesArr;
 }
 
 function filter(array, test) {
