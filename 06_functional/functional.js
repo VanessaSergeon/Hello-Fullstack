@@ -60,10 +60,11 @@ function countWordsInReduce(result, wordsArray) {
   return result + countWords(wordsArray);
 }
 
-// not passing
-function sum(arr) {
-	arr.reduce(function(a, b) {return a + b;}, 0);
-	return reduce;
+function sum(array) {
+  var addFunc = function(currVal, newVal){
+    return currVal + newVal;
+  };
+  return reduce(array, 0, addFunc);
 }
 
 function every(array, test) {
@@ -78,6 +79,11 @@ function every(array, test) {
 
 // passing 3/5
 function any(array, test) {
+  if(typeof test == "undefined"){
+    test = function(item){
+      return item;
+    }
+  }
 	var passing = false;
 	for(var i = 0; i < array.length; i++) {
 		if((array[i] === true) || (test(array[i]) === true)) {
